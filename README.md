@@ -63,6 +63,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Mysql](https://www.mysql.com/)
 - [IntelliJ](https://www.jetbrains.com/pt-br/idea/)
 - [Hibernate](https://hibernate.org/)
+- [Swagger](http://localhost:8080/swagger-ui.html) - Clicar após subir a aplicação
 
 ### 📁 Funcionalidades
 ##### Usuario
