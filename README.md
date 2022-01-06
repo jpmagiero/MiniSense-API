@@ -15,7 +15,6 @@
 - [Funcionalidades](#-funcionalidades)
 - [Problemas a serem resolvidos](#-problemas-a-serem-resolvidos)
 
-
 ### ✔️ Objetivo
 <p> 
 A API MiniSense foi desenvolvida com objetivo de facilitar o monitoramento de sensores IoT.
@@ -104,3 +103,95 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### 🔴 Problemas a serem resolvidos
 - "MeasurementCount" atualmente não está fazendo a contagem de todas as medições armazenadas.
+
+### 🔴 Exemplos JSON
+- Criar usuário:
+{
+  "email": "teste",
+  "name": "teste"
+}
+
+- Update usuário:
+{
+  "email": "Testeupdate",
+  "id": 1,
+  "name": "teste"
+}
+
+- Criar sensor:
+{
+  "description": "Sensor 1",
+  "label": "Sensor 1",
+  "userId": 1
+}
+
+- Sensor update:
+{
+  "description": "Sensor 1",
+  "id": 1,
+  "label": "Sensor teste update",
+  "userId": 1
+}
+
+- Criar sensor data:
+{
+  "timesTamp": "20202022",
+  "value": 70
+}
+
+- Update sensor data:
+{
+  "id": 1,
+  "timesTamp": "202022",
+  "value": 100
+}
+
+- Criar o measurementunit:
+{
+  "description": "Graus",
+  "symbol": "C"
+}
+
+- Update measurementUnit:
+{
+  "description": "Graus",
+  "id": 1,
+  "symbol": "F"
+}
+
+- Criar DataStream:
+{
+  "label": "Teste Stream",
+  "measurementUnitId": 1,
+  "sensorDataId": 1,
+  "sensorId": 1
+}
+
+- Update no DataStream:
+- {
+    "id": 1,
+    "streamKey": "Teste  update",
+    "label": "Teste  update",
+    "enabled": null,
+    "sensor": {
+        "id": 1,
+        "label": "Sensor teste update",
+        "description": "Sensor 1",
+        "user": {
+            "id": 1,
+            "name": "teste",
+            "email": "Testeupdate"
+        },
+        "key": "ff6de8ca-d887-475e-a017-1d46a23fd6b9"
+    },
+    "sensorData": {
+        "id": 1,
+        "value": 100.0,
+        "timesTamp": "202022"
+    },
+    "measurementUnit": {
+        "id": 4,
+        "symbol": "F",
+        "description": "Graus"
+    }
+}
